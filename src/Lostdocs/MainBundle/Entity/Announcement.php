@@ -85,6 +85,18 @@ class Announcement
     
     /**
      * @var string
+     * @ORM\Column(name="region", type="string", length=255, nullable=true)
+     */
+    private $region;
+    
+    /**
+     * @var string
+     * @ORM\Column(name="city", type="string", length=255, nullable=true)
+     */
+    private $city;
+    
+    /**
+     * @var string
      * @ORM\Column(name="street", type="string", length=255, nullable=true)
      */
     private $street;
@@ -101,15 +113,21 @@ class Announcement
      */
     private $document_type;
     
+    /**
+     * @var string
+     * @ORM\Column(name="reward", type="string", length=255, nullable=true)
+     */
+    private $reward;
+    
 
     /**
      * @ORM\ManyToMany(targetEntity="Photo", inversedBy="announcements")
-     * @ORM\JoinTable(name="Announcemet_photos")
+     * @ORM\JoinTable(name="Announcement_photos")
      */
     private $photos;
 
 
-
+    
 
    /**
      * Set title
@@ -374,5 +392,74 @@ class Announcement
     public function getPhotos()
     {
         return $this->photos;
+    }
+
+    /**
+     * Set reward
+     *
+     * @param string $reward
+     * @return Announcement
+     */
+    public function setReward($reward)
+    {
+        $this->reward = $reward;
+    
+        return $this;
+    }
+
+    /**
+     * Get reward
+     *
+     * @return string 
+     */
+    public function getReward()
+    {
+        return $this->reward;
+    }
+
+    /**
+     * Set region
+     *
+     * @param string $region
+     * @return Announcement
+     */
+    public function setRegion($region)
+    {
+        $this->region = $region;
+    
+        return $this;
+    }
+
+    /**
+     * Get region
+     *
+     * @return string 
+     */
+    public function getRegion()
+    {
+        return $this->region;
+    }
+
+    /**
+     * Set city
+     *
+     * @param string $city
+     * @return Announcement
+     */
+    public function setCity($city)
+    {
+        $this->city = $city;
+    
+        return $this;
+    }
+
+    /**
+     * Get city
+     *
+     * @return string 
+     */
+    public function getCity()
+    {
+        return $this->city;
     }
 }

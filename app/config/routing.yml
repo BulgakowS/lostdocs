@@ -1,7 +1,7 @@
 lostdocs_user:
     resource: "@LostdocsUserBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /user/
 
 lostdocs_main:
     resource: "@LostdocsMainBundle/Controller/"

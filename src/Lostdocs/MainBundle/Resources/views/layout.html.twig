@@ -1,0 +1,60 @@
+<!Doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Lost&AMP;found documents</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="description" content="">
+        <meta name="author" content="BulgakowS">
+        
+        <link href="{{ asset('bundles/lostdocsmain/css/bootstrap.css') }}" rel="stylesheet">
+        <link href="{{ asset('bundles/lostdocsmain/css/bootstrap-theme.css') }}" rel="stylesheet">
+        <link href="{{ asset('bundles/lostdocsmain/css/font-awesome.css') }}" rel="stylesheet">
+        <link href="{{ asset('bundles/lostdocsmain/css/font-awesome-ie7.css') }}" rel="stylesheet">
+        <link href="{{ asset('bundles/lostdocsmain/css/main.css') }}" rel="stylesheet">
+        
+        
+        <script src="{{ asset('bundles/lostdocsmain/js/jquery-2.0.2.min.js') }}"></script>
+        <script src="{{ asset('bundles/lostdocsmain/js/bootstrap.js') }}"></script>
+
+        <script type="text/javascript"
+            src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBgr-2p19bR8Ng1R9Tuy2yeNW2XYTGdQTg&sensor=true&language=ru&&region=UA">
+        </script>
+        
+        <script src="{{ asset('bundles/lostdocsmain/js/main.js') }}"></script>
+        
+        <!--link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png"-->
+        <link rel="shortcut icon" href="../assets/ico/favicon.png">
+    </head>
+    <body>
+        <!--[if gte IE 9]>
+            <style type="text/css">
+              .gradient { filter: none; }
+            </style>
+        <![endif]-->
+        <div id="wrap">
+
+            <div class="container">
+                <div class="page-header">
+                    <h1>Sticky footer</h1>
+                </div>
+                    {% block content %} 
+                    {% endblock content %}
+
+
+                    {% block fos_user_content %}
+                    {% endblock fos_user_content %}
+            </div>
+            <div id="push"></div>
+        </div>
+        <div id="footer">
+            <div class="container">
+                footer
+            </div>
+        </div>
+    </body>
+</html>
